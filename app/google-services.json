@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "765204054326",
+    "project_id": "lntfinalproject-e5b9a",
+    "storage_bucket": "lntfinalproject-e5b9a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:765204054326:android:a7559e7179dde8f7697397",
+        "android_client_info": {
+          "package_name": "com.example.lntfinalproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAp7QcrftYqyEZdf3WPkbST-H713-7rGh0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

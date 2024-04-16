@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".Volume">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volume Calculator"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="55dp"
+        android:fontFamily="sans-serif-black"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:gravity="top"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/layoutBlock"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/border_unselected"
+            android:padding="8dp"
+            android:layout_marginEnd="60dp">
+
+            <ImageView
+                android:id="@+id/imageBlock"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:src="@drawable/block_icon"
+                android:background="?android:attr/selectableItemBackground" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Block"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutPyramid"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/border_unselected"
+            android:padding="8dp"
+            android:layout_marginEnd="60dp"
+            android:layout_gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/imagePyramid"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:src="@drawable/pyramid_icon"
+                android:layout_margin="3dp"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pyramid"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutCylinder"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/border_unselected"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/imageCylinder"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:src="@drawable/cylinder_icon"
+                android:layout_margin="3dp"
+                android:background="?android:attr/selectableItemBackground"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cylinder"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Input untuk block -->
+        <LinearLayout
+            android:id="@+id/inputBlock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_margin="16dp">
+            <EditText
+                android:id="@+id/etBlockLength"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Panjang (cm)"
+                android:inputType="numberDecimal"
+                android:layout_margin="16dp"/>
+            <EditText
+                android:id="@+id/etBlockWidth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Lebar (cm)"
+                android:inputType="numberDecimal"
+                android:layout_margin="16dp"/>
+            <EditText
+                android:id="@+id/etBlockHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tinggi (cm)"
+                android:inputType="numberDecimal"
+                android:layout_margin="16dp"/>
+        </LinearLayout>
+
+        <!-- Input untuk pyramid -->
+        <LinearLayout
+            android:id="@+id/inputPyramid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_margin="16dp">
+
+            <EditText
+                android:id="@+id/etBaseLength"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Panjang alas (cm)"
+                android:inputType="numberDecimal"
+                android:layout_margin="16dp"/>
+
+            <EditText
+                android:id="@+id/etBaseWidth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Lebar alas (cm)"
+                android:inputType="numberDecimal"
+                android:layout_margin="16dp" />
+            <EditText
+                android:id="@+id/etPyramidHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tinggi (cm)"
+                android:inputType="numberDecimal"
+                android:layout_margin="16dp" />
+
+        </LinearLayout>
+
+        <!-- Input untuk cylinder -->
+        <LinearLayout
+            android:id="@+id/inputCylinder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_margin="16dp">
+            <EditText
+                android:id="@+id/etRadius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Jari-jari alas (cm)"
+                android:inputType="numberDecimal"
+                android:layout_margin="16dp"/>
+            <EditText
+                android:id="@+id/etCylinderHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tinggi (cm)"
+                android:inputType="numberDecimal"
+                android:layout_margin="16dp"/>
+        </LinearLayout>
+
+        <!-- Tombol untuk menghitung luas -->
+        <Button
+            android:id="@+id/buttonCalculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate" />
+
+    </LinearLayout>
+
+    <!-- Output hasil perhitungan luas -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="20dp" />
+    </LinearLayout>
+
+</LinearLayout>

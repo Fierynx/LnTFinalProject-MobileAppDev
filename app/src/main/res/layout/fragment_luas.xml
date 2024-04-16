@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Luas"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Area Calculator"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="55dp"
+        android:fontFamily="sans-serif-black"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:gravity="top"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <LinearLayout
+            android:id="@+id/layoutSquare"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/border_unselected"
+            android:padding="8dp"
+            android:layout_marginEnd="60dp"
+            android:layout_gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/imageSquare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/square_icon"
+                android:layout_margin="3dp"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Square"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutTriangle"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/border_unselected"
+            android:padding="8dp"
+            android:layout_marginEnd="60dp">
+
+            <!-- Segitiga -->
+            <ImageView
+                android:id="@+id/imageTriangle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/triangle_icon"
+                android:layout_margin="3dp"
+                android:background="?android:attr/selectableItemBackground" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Triangle"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutCircle"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/border_unselected"
+            android:padding="8dp"
+            android:onClick="selectCircle">
+
+            <!-- Lingkaran -->
+            <ImageView
+                android:id="@+id/imageCircle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/circle_icon"
+                android:layout_margin="3dp"
+                android:background="?android:attr/selectableItemBackground"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Circle"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Input untuk mencari luas -->
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Input untuk persegi -->
+        <LinearLayout
+            android:id="@+id/inputSquare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_margin="16dp">
+            <EditText
+                android:id="@+id/etSide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Panjang sisi (cm)"
+                android:inputType="numberDecimal"
+                android:layout_margin="16dp"/>
+        </LinearLayout>
+
+        <!-- Input untuk segitiga -->
+        <LinearLayout
+            android:id="@+id/inputTriangle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_margin="16dp">
+
+            <EditText
+                android:id="@+id/etBase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Panjang alas (cm)"
+                android:inputType="numberDecimal"
+                android:layout_margin="16dp"/>
+
+            <EditText
+                android:id="@+id/etHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tinggi (cm)"
+                android:inputType="numberDecimal"
+                android:layout_margin="16dp" />
+
+        </LinearLayout>
+
+        <!-- Input untuk lingkaran -->
+        <LinearLayout
+            android:id="@+id/inputCircle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_margin="16dp">
+            <EditText
+                android:id="@+id/etRadius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Jari-jari (cm)"
+                android:inputType="numberDecimal"
+                android:layout_margin="16dp"/>
+        </LinearLayout>
+
+        <!-- Tombol untuk menghitung luas -->
+        <Button
+            android:id="@+id/buttonCalculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate" />
+
+    </LinearLayout>
+
+    <!-- Output hasil perhitungan luas -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="20dp" />
+    </LinearLayout>
+
+</LinearLayout>

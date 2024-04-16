@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/counter"
+        android:title="Counter"
+        android:icon="@drawable/counter_icon"/>
+
+    <item
+        android:id="@+id/luas"
+        android:title="Area"
+        android:icon="@drawable/luas_icon"/>
+
+    <item
+        android:id="@+id/volume"
+        android:title="Volume"
+        android:icon="@drawable/volume_icon"/>
+</menu>
